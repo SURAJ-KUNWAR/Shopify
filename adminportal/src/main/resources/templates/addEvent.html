@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<body>
+	<div th:replace="common/header :: navbar" />
+	
+	
+	<form method="post" th:action="@{/event/addE}"   id="form" class="validate">
+ 
+  <div class="form-field">
+    <label for="email-input">Event Name</label>
+    <input  type="text" name="EventName" th:value="${event.EventName}" required />
+  </div>
+  <div class="form-field">
+    <label for="password-input">Event Start Date :</label>
+    <input id="Start"  name="Start" th:value="${event.Start}"  required />
+  </div>
+  <div class="form-field">
+    <label for="password-input">Event End Date :</label>
+    <input id = "end"  name="end" th:value="${event.end}" required />
+  </div>
+  <div class="form-field">
+    <label for=""></label>
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css" />
+<script th:src="@{/js/addEv.js}"></script>
+</body>
+</html>

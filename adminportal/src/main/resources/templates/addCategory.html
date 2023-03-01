@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<body>
+	<div th:replace="common/header :: navbar" />
+	
+	
+	<form method="post" th:action="@{/category/add}"   id="form" class="validate">
+  <!-- <div class="form-field">
+    <label for="full-name">Category Id</label>
+    <input type="text" name="id" th:value="${category.id}" required />
+  </div> -->
+  <div class="form-field">
+    <label for="email-input">Category Name</label>
+    <input type="text" name="categoryName" th:value="${category.categoryName}" required />
+  </div>
+ 
+ 
+  <div class="form-field">
+    <label for=""></label>
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+
+</body>
+</html>
